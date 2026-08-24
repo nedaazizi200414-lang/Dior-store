@@ -2,6 +2,7 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,7 +17,9 @@ tailwind.config = {
 </script>
 
 <style>
-/* Navbar */
+
+/* ================= NAVBAR ================= */
+
 #navbar {
   transition:
     background-color 0.3s ease,
@@ -24,23 +27,50 @@ tailwind.config = {
     border-color 0.3s ease;
 }
 
-/* Scrolled Navbar */
-#navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(255, 196, 0, 0.25);
+
+/* Light mode - scrolled */
+
+#navbar.scrolled-light {
+  background-color: #ffffff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
+
+/* Dark mode - scrolled */
+
+#navbar.scrolled-dark {
+  background-color: #000000;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+  border-bottom: 1px solid rgba(255,196,0,0.15);
+}
+
+
+/* Navbar links */
+
+.navbar-link {
+  color: rgb(250, 180, 0);
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: rgb(255, 210, 70);
+}
+
+
 /* Mobile menu */
+
 #mobileMenu {
   transition: all 0.3s ease;
 }
+
 </style>
 
 </head>
 
 
-<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition duration-300">
+<body
+class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition duration-300">
 
 
 <!-- =====================================================
@@ -59,7 +89,9 @@ class="fixed top-0 left-0 w-full z-50 bg-transparent">
 
     <h1
     class="text-2xl font-bold text-yellow-400">
+
       DIOR
+
     </h1>
 
 
@@ -70,32 +102,46 @@ class="fixed top-0 left-0 w-full z-50 bg-transparent">
 
       <a
       href="#everything"
-      class="text-yellow-400 hover:text-yellow-200 transition">
+      class="navbar-link">
+
         Everything
+
       </a>
+
 
       <a
       href="#women"
-      class="text-yellow-400 hover:text-yellow-200 transition">
+      class="navbar-link">
+
         Women
+
       </a>
+
 
       <a
       href="#men"
-      class="text-yellow-400 hover:text-yellow-200 transition">
+      class="navbar-link">
+
         Men
+
       </a>
+
 
       <a
       href="#accessories"
-      class="text-yellow-400 hover:text-yellow-200 transition">
+      class="navbar-link">
+
         Accessories
+
       </a>
+
 
       <a
       href="#contact"
-      class="text-yellow-400 hover:text-yellow-200 transition">
+      class="navbar-link">
+
         Contact
+
       </a>
 
     </nav>
@@ -103,7 +149,8 @@ class="fixed top-0 left-0 w-full z-50 bg-transparent">
 
     <!-- RIGHT SIDE -->
 
-    <div class="flex items-center gap-3">
+    <div
+    class="flex items-center gap-3">
 
 
       <!-- MOBILE MENU BUTTON -->
@@ -121,7 +168,7 @@ class="fixed top-0 left-0 w-full z-50 bg-transparent">
 
       <button
       id="themeToggle"
-      class="bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded transition">
+      class="bg-black/20 dark:bg-white/10 text-white px-3 py-1 rounded transition">
 
         🌙
 
@@ -138,39 +185,54 @@ class="fixed top-0 left-0 w-full z-50 bg-transparent">
 
   <div
   id="mobileMenu"
-  class="hidden md:hidden bg-black border-t border-yellow-400/20">
+  class="hidden md:hidden bg-white dark:bg-black border-t border-yellow-400/20">
 
     <nav
     class="flex flex-col px-6 py-5 space-y-4">
 
+
       <a
       href="#everything"
-      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+      class="mobile-link navbar-link">
+
         Everything
+
       </a>
+
 
       <a
       href="#women"
-      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+      class="mobile-link navbar-link">
+
         Women
+
       </a>
+
 
       <a
       href="#men"
-      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+      class="mobile-link navbar-link">
+
         Men
+
       </a>
+
 
       <a
       href="#accessories"
-      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+      class="mobile-link navbar-link">
+
         Accessories
+
       </a>
+
 
       <a
       href="#contact"
-      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+      class="mobile-link navbar-link">
+
         Contact
+
       </a>
 
     </nav>
@@ -197,6 +259,7 @@ style="background-image:url('img111.jpeg')">
   <div
   class="relative max-w-7xl mx-auto px-6 text-white">
 
+
     <h2
     class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
 
@@ -207,12 +270,17 @@ style="background-image:url('img111.jpeg')">
     </h2>
 
 
-    <p class="mb-6 text-lg">
+    <p
+    class="mb-6 text-lg">
+
       25% Off On All Products
+
     </p>
 
 
-    <div class="space-x-4">
+    <div
+    class="space-x-4">
+
 
       <button
       class="bg-white text-black px-6 py-3 rounded font-semibold">
@@ -248,9 +316,13 @@ class="py-10 bg-gray-100 dark:bg-gray-800">
   class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center opacity-70">
 
     <div>Boots</div>
+
     <div>Women's suit</div>
+
     <div>T-shirt</div>
+
     <div>Accessories</div>
+
     <div>Men's suit</div>
 
   </div>
@@ -267,9 +339,8 @@ class="py-10 bg-gray-100 dark:bg-gray-800">
 class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
 
-  <!-- CARD 1 -->
-
-  <div class="relative group">
+  <div
+  class="relative group">
 
     <img
     src="img2.jpeg"
@@ -289,7 +360,6 @@ class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
       </h3>
 
-
       <button
       class="bg-white text-black px-4 py-2 rounded">
 
@@ -303,9 +373,8 @@ class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
 
 
-  <!-- CARD 2 -->
-
-  <div class="relative group">
+  <div
+  class="relative group">
 
     <img
     src="img1.jpeg"
@@ -325,7 +394,6 @@ class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
       </h3>
 
-
       <button
       class="bg-white text-black px-4 py-2 rounded">
 
@@ -339,9 +407,8 @@ class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
 
 
-  <!-- CARD 3 -->
-
-  <div class="relative group">
+  <div
+  class="relative group">
 
     <img
     src="img4.jpeg"
@@ -360,7 +427,6 @@ class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
         Let’s Suit Up!
 
       </h3>
-
 
       <button
       class="bg-white text-black px-4 py-2 rounded">
@@ -400,8 +466,6 @@ class="py-16 bg-gray-50 dark:bg-gray-800">
     class="grid grid-cols-2 md:grid-cols-5 gap-6">
 
 
-      <!-- PRODUCT -->
-
       <div
       class="bg-white dark:bg-gray-700 p-4 rounded shadow relative">
 
@@ -421,6 +485,7 @@ class="py-16 bg-gray-50 dark:bg-gray-800">
         <h4 class="font-semibold">
           Women's green suit
         </h4>
+
 
         <p class="text-sm text-gray-500">
           $120.00
@@ -513,7 +578,7 @@ class="py-16 bg-gray-50 dark:bg-gray-800">
 
 
 <!-- =====================================================
-                    WOMEN COLLECTION
+                    WOMEN
 ===================================================== -->
 
 <section
@@ -618,7 +683,7 @@ class="py-20 bg-white dark:bg-gray-900">
 
 
 <!-- =====================================================
-                    MEN COLLECTION
+                       MEN
 ===================================================== -->
 
 <section
@@ -828,7 +893,7 @@ class="py-20 bg-white dark:bg-gray-900">
 
 
 <!-- =====================================================
-                       CONTACT
+                     CONTACT
 ===================================================== -->
 
 <section
@@ -850,9 +915,8 @@ class="py-20 bg-gray-100 dark:bg-gray-800">
     class="grid md:grid-cols-2 gap-12">
 
 
-      <!-- INFO -->
-
-      <div style="margin-top:70px;">
+      <div
+      style="margin-top:70px;">
 
         <h3
         class="text-xl font-semibold mb-4">
@@ -898,17 +962,19 @@ class="py-20 bg-gray-100 dark:bg-gray-800">
 
 
 
-      <!-- FORM -->
-
       <form
       class="bg-white dark:bg-gray-900 p-8 rounded shadow space-y-6">
 
 
         <div>
 
-          <label class="block text-sm mb-2">
+          <label
+          class="block text-sm mb-2">
+
             Name
+
           </label>
+
 
           <input
           type="text"
@@ -919,9 +985,13 @@ class="py-20 bg-gray-100 dark:bg-gray-800">
 
         <div>
 
-          <label class="block text-sm mb-2">
+          <label
+          class="block text-sm mb-2">
+
             Email
+
           </label>
+
 
           <input
           type="email"
@@ -932,9 +1002,13 @@ class="py-20 bg-gray-100 dark:bg-gray-800">
 
         <div>
 
-          <label class="block text-sm mb-2">
+          <label
+          class="block text-sm mb-2">
+
             Message
+
           </label>
+
 
           <textarea
           rows="4"
@@ -962,7 +1036,7 @@ class="py-20 bg-gray-100 dark:bg-gray-800">
 
 
 <!-- =====================================================
-                         FOOTER
+                       FOOTER
 ===================================================== -->
 
 <footer
@@ -981,6 +1055,7 @@ class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transiti
         DIOR
 
       </h3>
+
 
       <p
       class="text-sm text-gray-600 dark:text-gray-400">
@@ -1014,6 +1089,7 @@ class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transiti
           </a>
         </li>
 
+
         <li>
           <a
           href="#men"
@@ -1021,6 +1097,7 @@ class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transiti
             Men
           </a>
         </li>
+
 
         <li>
           <a
@@ -1056,6 +1133,7 @@ class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transiti
             Contact Us
           </a>
         </li>
+
 
         <li>
           <a
@@ -1123,26 +1201,47 @@ class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transiti
 
 
 /* =====================================================
-                  NAVBAR SCROLL
+                 NAVBAR SCROLL EFFECT
 ===================================================== */
 
 const navbar =
 document.getElementById("navbar");
 
 
-window.addEventListener("scroll", () => {
+function updateNavbar() {
 
-  if (window.scrollY > 40) {
+  const isDark =
+  document.documentElement.classList.contains("dark");
 
-    navbar.classList.add("scrolled");
+
+  if (window.scrollY > 50) {
+
+    navbar.classList.remove("bg-transparent");
+
+    navbar.classList.add(
+      isDark
+      ? "scrolled-dark"
+      : "scrolled-light"
+    );
 
   } else {
 
-    navbar.classList.remove("scrolled");
+    navbar.classList.remove(
+      "scrolled-light",
+      "scrolled-dark"
+    );
+
+    navbar.classList.add("bg-transparent");
 
   }
 
-});
+}
+
+
+window.addEventListener(
+  "scroll",
+  updateNavbar
+);
 
 
 
@@ -1157,15 +1256,17 @@ const mobileMenu =
 document.getElementById("mobileMenu");
 
 
-mobileMenuBtn.addEventListener("click", () => {
+mobileMenuBtn.addEventListener(
+  "click",
+  () => {
 
-  mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
 
-});
+  }
+);
 
 
-
-/* Close mobile menu after clicking a link */
+/* Close menu after clicking */
 
 const mobileLinks =
 document.querySelectorAll(".mobile-link");
@@ -1173,11 +1274,14 @@ document.querySelectorAll(".mobile-link");
 
 mobileLinks.forEach(link => {
 
-  link.addEventListener("click", () => {
+  link.addEventListener(
+    "click",
+    () => {
 
-    mobileMenu.classList.add("hidden");
+      mobileMenu.classList.add("hidden");
 
-  });
+    }
+  );
 
 });
 
@@ -1204,26 +1308,35 @@ if (
 }
 
 
-toggle.addEventListener("click", () => {
+toggle.addEventListener(
+  "click",
+  () => {
 
-  document.documentElement.classList.toggle("dark");
+    document.documentElement.classList.toggle("dark");
 
 
-  if (
-    document.documentElement.classList.contains("dark")
-  ) {
+    if (
+      document.documentElement.classList.contains("dark")
+    ) {
 
-    toggle.textContent = "☀️";
+      toggle.textContent = "☀️";
 
-  } else {
+    } else {
 
-    toggle.textContent = "🌙";
+      toggle.textContent = "🌙";
+
+    }
+
+
+    /* Update navbar immediately */
+
+    updateNavbar();
 
   }
-
-});
+);
 
 </script>
+
 
 </body>
 </html>

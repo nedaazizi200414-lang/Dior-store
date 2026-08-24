@@ -101,6 +101,24 @@ tailwind.config = {
 }
 
 
+/* فقط در موبایل نمایش داده شود */
+
+@media (min-width: 768px) {
+  #mobileMenuBtn {
+    display: none !important;
+  }
+}
+
+
+/* موبایل */
+
+@media (max-width: 767px) {
+  #mobileMenuBtn {
+    display: flex !important;
+  }
+}
+
+
 /* هنگام لمس / کلیک / Hover */
 
 #mobileMenuBtn:hover,

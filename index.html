@@ -1,166 +1,232 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>DIOR Store</title>
 
-<link rel="stylesheet" href="output.css" />
+<link rel="stylesheet" href="output.css">
 
 <script>
 tailwind.config = {
   darkMode: 'class'
 }
 </script>
+
+<style>
+/* Navbar */
+#navbar {
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Scrolled Navbar */
+#navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 196, 0, 0.25);
+}
+
+/* Mobile menu */
+#mobileMenu {
+  transition: all 0.3s ease;
+}
+</style>
+
 </head>
+
 
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition duration-300">
 
-<!-- ================= NAVBAR ================= -->
+
+<!-- =====================================================
+                         NAVBAR
+===================================================== -->
 
 <header
-  id="navbar"
-  class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md z-50 transition-all duration-300">
+id="navbar"
+class="fixed top-0 left-0 w-full z-50 bg-transparent">
 
-  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+  <div
+  class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
 
     <!-- LOGO -->
-    <h1 class="text-2xl font-bold text-yellow-400">
+
+    <h1
+    class="text-2xl font-bold text-yellow-400">
       DIOR
     </h1>
 
 
     <!-- DESKTOP NAVIGATION -->
-    <nav class="hidden md:flex space-x-8 font-medium text-yellow-400">
+
+    <nav
+    class="hidden md:flex items-center space-x-8 font-medium">
 
       <a
-        href="#everything"
-        class="hover:text-yellow-200 transition">
+      href="#everything"
+      class="text-yellow-400 hover:text-yellow-200 transition">
         Everything
       </a>
 
       <a
-        href="#women"
-        class="hover:text-yellow-200 transition">
+      href="#women"
+      class="text-yellow-400 hover:text-yellow-200 transition">
         Women
       </a>
 
       <a
-        href="#men"
-        class="hover:text-yellow-200 transition">
+      href="#men"
+      class="text-yellow-400 hover:text-yellow-200 transition">
         Men
       </a>
 
       <a
-        href="#accessories"
-        class="hover:text-yellow-200 transition">
+      href="#accessories"
+      class="text-yellow-400 hover:text-yellow-200 transition">
         Accessories
       </a>
 
       <a
-        href="#contact"
-        class="hover:text-yellow-200 transition">
+      href="#contact"
+      class="text-yellow-400 hover:text-yellow-200 transition">
         Contact
       </a>
 
     </nav>
 
 
-    <!-- MOBILE MENU -->
-    <div class="md:hidden relative">
+    <!-- RIGHT SIDE -->
+
+    <div class="flex items-center gap-3">
+
+
+      <!-- MOBILE MENU BUTTON -->
 
       <button
-        id="mobileMenuBtn"
-        class="text-yellow-400 text-2xl focus:outline-none">
+      id="mobileMenuBtn"
+      class="md:hidden text-yellow-400 text-2xl w-10 h-10 flex items-center justify-center focus:outline-none">
 
         ☰
 
       </button>
 
 
-      <div
-        id="mobileMenu"
-        class="hidden absolute right-0 top-10 w-48 bg-black/90 backdrop-blur-md rounded-lg shadow-lg p-4">
+      <!-- DARK MODE -->
 
-        <a
-          href="#everything"
-          class="mobile-link block text-yellow-400 py-2 hover:text-yellow-200 transition">
-          Everything
-        </a>
-
-        <a
-          href="#women"
-          class="mobile-link block text-yellow-400 py-2 hover:text-yellow-200 transition">
-          Women
-        </a>
-
-        <a
-          href="#men"
-          class="mobile-link block text-yellow-400 py-2 hover:text-yellow-200 transition">
-          Men
-        </a>
-
-        <a
-          href="#accessories"
-          class="mobile-link block text-yellow-400 py-2 hover:text-yellow-200 transition">
-          Accessories
-        </a>
-
-        <a
-          href="#contact"
-          class="mobile-link block text-yellow-400 py-2 hover:text-yellow-200 transition">
-          Contact
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- DARK MODE BUTTON -->
-    <button
+      <button
       id="themeToggle"
       class="bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded transition">
 
-      🌙
+        🌙
 
-    </button>
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+                       MOBILE MENU
+  ===================================================== -->
+
+  <div
+  id="mobileMenu"
+  class="hidden md:hidden bg-black border-t border-yellow-400/20">
+
+    <nav
+    class="flex flex-col px-6 py-5 space-y-4">
+
+      <a
+      href="#everything"
+      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+        Everything
+      </a>
+
+      <a
+      href="#women"
+      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+        Women
+      </a>
+
+      <a
+      href="#men"
+      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+        Men
+      </a>
+
+      <a
+      href="#accessories"
+      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+        Accessories
+      </a>
+
+      <a
+      href="#contact"
+      class="mobile-link text-yellow-400 hover:text-yellow-200 transition">
+        Contact
+      </a>
+
+    </nav>
 
   </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+                           HERO
+===================================================== -->
 
 <section
-  class="min-h-screen bg-cover bg-center flex items-center relative"
-  style="background-image:url('img111.jpeg')">
+class="min-h-screen bg-cover bg-center flex items-center relative"
+style="background-image:url('img111.jpeg')">
 
-  <div class="bg-black/50 w-full h-full absolute inset-0"></div>
+  <div
+  class="bg-black/50 w-full h-full absolute inset-0">
+  </div>
 
-  <div class="relative max-w-7xl mx-auto px-6 text-white">
 
-    <h2 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-      Raining Offers <br>
+  <div
+  class="relative max-w-7xl mx-auto px-6 text-white">
+
+    <h2
+    class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+
+      Raining Offers
+      <br>
       For You!
+
     </h2>
+
 
     <p class="mb-6 text-lg">
       25% Off On All Products
     </p>
 
+
     <div class="space-x-4">
 
       <button
-        class="bg-white text-black px-6 py-3 rounded font-semibold">
+      class="bg-white text-black px-6 py-3 rounded font-semibold">
+
         SHOP NOW
+
       </button>
 
+
       <button
-        class="border border-white px-6 py-3 rounded">
+      class="border border-white px-6 py-3 rounded">
+
         FIND MORE
+
       </button>
 
     </div>
@@ -170,11 +236,16 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= LOGO STRIP ================= -->
 
-<section class="py-10 bg-gray-100 dark:bg-gray-800">
+<!-- =====================================================
+                       LOGO STRIP
+===================================================== -->
 
-  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center opacity-70">
+<section
+class="py-10 bg-gray-100 dark:bg-gray-800">
+
+  <div
+  class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center opacity-70">
 
     <div>Boots</div>
     <div>Women's suit</div>
@@ -187,27 +258,43 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= 3 PROMO CARDS ================= -->
 
-<section class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+<!-- =====================================================
+                    PROMO CARDS
+===================================================== -->
+
+<section
+class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+
+  <!-- CARD 1 -->
 
   <div class="relative group">
 
     <img
-      src="img2.jpeg"
-      class="rounded-lg h-96 w-full object-cover">
+    src="img2.jpeg"
+    class="rounded-lg h-96 w-full object-cover">
 
-    <div class="absolute inset-0 bg-black/40 rounded-lg"></div>
+    <div
+    class="absolute inset-0 bg-black/40 rounded-lg">
+    </div>
 
-    <div class="absolute bottom-8 left-6 text-white">
+    <div
+    class="absolute bottom-8 left-6 text-white">
 
-      <h3 class="text-xl font-bold mb-2">
+      <h3
+      class="text-xl font-bold mb-2">
+
         We dress you from head to toe
+
       </h3>
 
+
       <button
-        class="bg-white text-black px-4 py-2 rounded">
+      class="bg-white text-black px-4 py-2 rounded">
+
         SHOP NOW
+
       </button>
 
     </div>
@@ -215,23 +302,35 @@ tailwind.config = {
   </div>
 
 
+
+  <!-- CARD 2 -->
+
   <div class="relative group">
 
     <img
-      src="img1.jpeg"
-      class="rounded-lg h-96 w-full object-cover">
+    src="img1.jpeg"
+    class="rounded-lg h-96 w-full object-cover">
 
-    <div class="absolute inset-0 bg-black/40 rounded-lg"></div>
+    <div
+    class="absolute inset-0 bg-black/40 rounded-lg">
+    </div>
 
-    <div class="absolute bottom-8 left-6 text-white">
+    <div
+    class="absolute bottom-8 left-6 text-white">
 
-      <h3 class="text-xl font-bold mb-2">
+      <h3
+      class="text-xl font-bold mb-2">
+
         Complete your look
+
       </h3>
 
+
       <button
-        class="bg-white text-black px-4 py-2 rounded">
+      class="bg-white text-black px-4 py-2 rounded">
+
         SHOP NOW
+
       </button>
 
     </div>
@@ -239,23 +338,35 @@ tailwind.config = {
   </div>
 
 
+
+  <!-- CARD 3 -->
+
   <div class="relative group">
 
     <img
-      src="img4.jpeg"
-      class="rounded-lg h-96 w-full object-cover">
+    src="img4.jpeg"
+    class="rounded-lg h-96 w-full object-cover">
 
-    <div class="absolute inset-0 bg-black/40 rounded-lg"></div>
+    <div
+    class="absolute inset-0 bg-black/40 rounded-lg">
+    </div>
 
-    <div class="absolute bottom-8 left-6 text-white">
+    <div
+    class="absolute bottom-8 left-6 text-white">
 
-      <h3 class="text-xl font-bold mb-2">
+      <h3
+      class="text-xl font-bold mb-2">
+
         Let’s Suit Up!
+
       </h3>
 
+
       <button
-        class="bg-white text-black px-4 py-2 rounded">
+      class="bg-white text-black px-4 py-2 rounded">
+
         CHECK OUT
+
       </button>
 
     </div>
@@ -265,31 +376,47 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= FEATURED PRODUCTS ================= -->
+
+<!-- =====================================================
+                  FEATURED PRODUCTS
+===================================================== -->
 
 <section
-  id="everything"
-  class="py-16 bg-gray-50 dark:bg-gray-800">
+id="everything"
+class="py-16 bg-gray-50 dark:bg-gray-800">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div
+  class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-12">
+    <h2
+    class="text-3xl font-bold text-center mb-12">
+
       Featured Products
+
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+
+    <div
+    class="grid grid-cols-2 md:grid-cols-5 gap-6">
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow relative">
+      <!-- PRODUCT -->
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow relative">
 
         <span
-          class="absolute top-3 left-3 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+        class="absolute top-3 left-3 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+
           Sale
+
         </span>
 
+
         <img
-          src="img9.jpeg"
-          class="h-40 w-full object-cover mb-4">
+        src="img9.jpeg"
+        class="h-40 w-full object-cover mb-4">
+
 
         <h4 class="font-semibold">
           Women's green suit
@@ -302,11 +429,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img18.jpeg"
-          class="h-40 w-full object-cover mb-4">
+        src="img18.jpeg"
+        class="h-40 w-full object-cover mb-4">
 
         <h4 class="font-semibold">
           Off-white boots
@@ -319,11 +448,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img27.jpeg"
-          class="h-40 w-full object-cover mb-4">
+        src="img27.jpeg"
+        class="h-40 w-full object-cover mb-4">
 
         <h4 class="font-semibold">
           Men's pants & blouses
@@ -336,11 +467,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img24.jpeg"
-          class="h-40 w-full object-cover mb-4">
+        src="img24.jpeg"
+        class="h-40 w-full object-cover mb-4">
 
         <h4 class="font-semibold">
           Bracelet
@@ -353,11 +486,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img10.jpeg"
-          class="h-40 w-full object-cover mb-4">
+        src="img10.jpeg"
+        class="h-40 w-full object-cover mb-4">
 
         <h4 class="font-semibold">
           Red dress
@@ -376,26 +511,36 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= WOMEN ================= -->
+
+<!-- =====================================================
+                    WOMEN COLLECTION
+===================================================== -->
 
 <section
-  id="women"
-  class="py-20 bg-white dark:bg-gray-900">
+id="women"
+class="py-20 bg-white dark:bg-gray-900">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div
+  class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-12">
+    <h2
+    class="text-3xl font-bold text-center mb-12">
+
       Women Collection
+
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div
+    class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img11.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img11.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Winter Dress
@@ -408,11 +553,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img29.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img29.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Women Shoes & Bags
@@ -425,11 +572,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img16.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img16.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Winter Dress
@@ -442,11 +591,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img37.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img37.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Women Party Shoes
@@ -465,26 +616,36 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= MEN ================= -->
+
+<!-- =====================================================
+                    MEN COLLECTION
+===================================================== -->
 
 <section
-  id="men"
-  class="py-20 bg-gray-50 dark:bg-gray-800">
+id="men"
+class="py-20 bg-gray-50 dark:bg-gray-800">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div
+  class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-12">
+    <h2
+    class="text-3xl font-bold text-center mb-12">
+
       Men Collection
+
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div
+    class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img32.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img32.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Men Hoodie
@@ -497,11 +658,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img36.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img36.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Men Shoes
@@ -514,11 +677,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="img31.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img31.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Leather coat
@@ -531,11 +696,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+
+      <div
+      class="bg-white dark:bg-gray-700 p-4 rounded shadow">
 
         <img
-          src="333.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="333.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Men suit
@@ -554,26 +721,36 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= ACCESSORIES ================= -->
+
+<!-- =====================================================
+                    ACCESSORIES
+===================================================== -->
 
 <section
-  id="accessories"
-  class="py-20 bg-white dark:bg-gray-900">
+id="accessories"
+class="py-20 bg-white dark:bg-gray-900">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div
+  class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-12">
+    <h2
+    class="text-3xl font-bold text-center mb-12">
+
       Accessories
+
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div
+    class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img33.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img33.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Men's Watch
@@ -586,11 +763,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img22.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img22.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Diamond Ring
@@ -603,11 +782,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img23.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img23.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Diamond site
@@ -620,11 +801,13 @@ tailwind.config = {
       </div>
 
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
+
+      <div
+      class="bg-gray-50 dark:bg-gray-800 p-4 rounded shadow">
 
         <img
-          src="img35.jpeg"
-          class="h-48 w-full object-cover mb-4 rounded">
+        src="img35.jpeg"
+        class="h-48 w-full object-cover mb-4 rounded">
 
         <h4 class="font-semibold">
           Silver Watch
@@ -643,28 +826,44 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+
+<!-- =====================================================
+                       CONTACT
+===================================================== -->
 
 <section
-  id="contact"
-  class="py-20 bg-gray-100 dark:bg-gray-800">
+id="contact"
+class="py-20 bg-gray-100 dark:bg-gray-800">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div
+  class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-center mb-12">
+    <h2
+    class="text-3xl font-bold text-center mb-12">
+
       Contact Us
+
     </h2>
 
-    <div class="grid md:grid-cols-2 gap-12">
+
+    <div
+    class="grid md:grid-cols-2 gap-12">
 
 
-      <div style="margin-top: 70px;">
+      <!-- INFO -->
 
-        <h3 class="text-xl font-semibold mb-4">
+      <div style="margin-top:70px;">
+
+        <h3
+        class="text-xl font-semibold mb-4">
+
           Get In Touch
+
         </h3>
 
-        <p class="text-gray-600 dark:text-gray-400 mb-6 font-bold">
+
+        <p
+        class="text-gray-600 dark:text-gray-400 mb-6 font-bold">
 
           We'd love to hear from you.
 
@@ -675,18 +874,22 @@ tailwind.config = {
         </p>
 
 
-        <div class="space-y-4 text-sm">
+        <div
+        class="space-y-4 text-sm">
 
           <p>
-            <strong>Email:</strong> DIOR@gmail.com
+            <strong>Email:</strong>
+            DIOR@gmail.com
           </p>
 
           <p>
-            <strong>Phone:</strong> +93798469728
+            <strong>Phone:</strong>
+            +93798469728
           </p>
 
           <p>
-            <strong>Address:</strong> 123 Fashion Street, KA
+            <strong>Address:</strong>
+            123 Fashion Street, KA
           </p>
 
         </div>
@@ -694,8 +897,11 @@ tailwind.config = {
       </div>
 
 
+
+      <!-- FORM -->
+
       <form
-        class="bg-white dark:bg-gray-900 p-8 rounded shadow space-y-6">
+      class="bg-white dark:bg-gray-900 p-8 rounded shadow space-y-6">
 
 
         <div>
@@ -705,8 +911,8 @@ tailwind.config = {
           </label>
 
           <input
-            type="text"
-            class="w-full px-4 py-2 rounded border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          type="text"
+          class="w-full px-4 py-2 rounded border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
 
         </div>
 
@@ -718,8 +924,8 @@ tailwind.config = {
           </label>
 
           <input
-            type="email"
-            class="w-full px-4 py-2 rounded border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          type="email"
+          class="w-full px-4 py-2 rounded border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
 
         </div>
 
@@ -731,15 +937,15 @@ tailwind.config = {
           </label>
 
           <textarea
-            rows="4"
-            class="w-full px-4 py-2 rounded border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+          rows="4"
+          class="w-full px-4 py-2 rounded border dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
 
         </div>
 
 
         <button
-          type="submit"
-          class="bg-yellow-400 text-black px-6 py-3 rounded font-semibold hover:scale-105 transition">
+        type="submit"
+        class="bg-yellow-400 text-black px-6 py-3 rounded font-semibold hover:scale-105 transition">
 
           Send Message
 
@@ -754,25 +960,30 @@ tailwind.config = {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+                         FOOTER
+===================================================== -->
 
 <footer
-  class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transition duration-300">
+class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-12 transition duration-300">
+
 
   <div
-    class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+  class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
 
 
     <div>
 
       <h3
-        class="text-xl font-bold text-gray-900 dark:text-white mb-4">
+      class="text-xl font-bold text-gray-900 dark:text-white mb-4">
 
         DIOR
 
       </h3>
 
-      <p class="text-sm text-gray-600 dark:text-gray-400">
+      <p
+      class="text-sm text-gray-600 dark:text-gray-400">
 
         Stylish collections for modern fashion lovers.
 
@@ -781,37 +992,40 @@ tailwind.config = {
     </div>
 
 
+
     <div>
 
       <h4
-        class="font-semibold text-gray-900 dark:text-white mb-4">
+      class="font-semibold text-gray-900 dark:text-white mb-4">
 
         Quick Links
 
       </h4>
 
-      <ul class="space-y-2 text-sm">
+
+      <ul
+      class="space-y-2 text-sm">
 
         <li>
           <a
-            href="#women"
-            class="hover:text-yellow-400 transition">
+          href="#women"
+          class="hover:text-yellow-400 transition">
             Women
           </a>
         </li>
 
         <li>
           <a
-            href="#men"
-            class="hover:text-yellow-400 transition">
+          href="#men"
+          class="hover:text-yellow-400 transition">
             Men
           </a>
         </li>
 
         <li>
           <a
-            href="#accessories"
-            class="hover:text-yellow-400 transition">
+          href="#accessories"
+          class="hover:text-yellow-400 transition">
             Accessories
           </a>
         </li>
@@ -821,29 +1035,32 @@ tailwind.config = {
     </div>
 
 
+
     <div>
 
       <h4
-        class="font-semibold text-gray-900 dark:text-white mb-4">
+      class="font-semibold text-gray-900 dark:text-white mb-4">
 
         Support
 
       </h4>
 
-      <ul class="space-y-2 text-sm">
+
+      <ul
+      class="space-y-2 text-sm">
 
         <li>
           <a
-            href="#contact"
-            class="hover:text-yellow-400 transition">
+          href="#contact"
+          class="hover:text-yellow-400 transition">
             Contact Us
           </a>
         </li>
 
         <li>
           <a
-            href="#"
-            class="hover:text-yellow-400 transition">
+          href="#"
+          class="hover:text-yellow-400 transition">
             Returns
           </a>
         </li>
@@ -853,24 +1070,27 @@ tailwind.config = {
     </div>
 
 
+
     <div>
 
       <h4
-        class="font-semibold text-gray-900 dark:text-white mb-4">
+      class="font-semibold text-gray-900 dark:text-white mb-4">
 
         Subscribe
 
       </h4>
 
+
       <div class="flex">
 
         <input
-          type="email"
-          placeholder="Your Email"
-          class="w-full px-3 py-2 rounded-l bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm focus:outline-none">
+        type="email"
+        placeholder="Your Email"
+        class="w-full px-3 py-2 rounded-l bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm focus:outline-none">
+
 
         <button
-          class="bg-yellow-400 text-black px-4 rounded-r font-semibold hover:scale-105 transition">
+        class="bg-yellow-400 text-black px-4 rounded-r font-semibold hover:scale-105 transition">
 
           Go
 
@@ -883,8 +1103,9 @@ tailwind.config = {
   </div>
 
 
+
   <div
-    class="text-center text-sm text-gray-500 dark:text-gray-400 mt-10 border-t border-gray-300 dark:border-gray-700 pt-6">
+  class="text-center text-sm text-gray-500 dark:text-gray-400 mt-10 border-t border-gray-300 dark:border-gray-700 pt-6">
 
     © 2026 DIOR Store.
 
@@ -893,15 +1114,86 @@ tailwind.config = {
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<!-- =====================================================
+                      JAVASCRIPT
+===================================================== -->
 
 <script>
 
-// ================= DARK MODE =================
 
-const toggle = document.getElementById('themeToggle');
+/* =====================================================
+                  NAVBAR SCROLL
+===================================================== */
 
-if (document.documentElement.classList.contains("dark")) {
+const navbar =
+document.getElementById("navbar");
+
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 40) {
+
+    navbar.classList.add("scrolled");
+
+  } else {
+
+    navbar.classList.remove("scrolled");
+
+  }
+
+});
+
+
+
+/* =====================================================
+                    MOBILE MENU
+===================================================== */
+
+const mobileMenuBtn =
+document.getElementById("mobileMenuBtn");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+
+mobileMenuBtn.addEventListener("click", () => {
+
+  mobileMenu.classList.toggle("hidden");
+
+});
+
+
+
+/* Close mobile menu after clicking a link */
+
+const mobileLinks =
+document.querySelectorAll(".mobile-link");
+
+
+mobileLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    mobileMenu.classList.add("hidden");
+
+  });
+
+});
+
+
+
+/* =====================================================
+                    DARK MODE
+===================================================== */
+
+const toggle =
+document.getElementById("themeToggle");
+
+
+if (
+  document.documentElement.classList.contains("dark")
+) {
 
   toggle.textContent = "☀️";
 
@@ -912,11 +1204,14 @@ if (document.documentElement.classList.contains("dark")) {
 }
 
 
-toggle.addEventListener('click', () => {
+toggle.addEventListener("click", () => {
 
-  document.documentElement.classList.toggle('dark');
+  document.documentElement.classList.toggle("dark");
 
-  if (document.documentElement.classList.contains("dark")) {
+
+  if (
+    document.documentElement.classList.contains("dark")
+  ) {
 
     toggle.textContent = "☀️";
 
@@ -925,39 +1220,6 @@ toggle.addEventListener('click', () => {
     toggle.textContent = "🌙";
 
   }
-
-});
-
-
-// ================= MOBILE MENU =================
-
-const mobileMenuBtn =
-  document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-  document.getElementById("mobileMenu");
-
-
-mobileMenuBtn.addEventListener("click", () => {
-
-  mobileMenu.classList.toggle("hidden");
-
-});
-
-
-// Close mobile menu after selecting a link
-
-const mobileLinks =
-  document.querySelectorAll(".mobile-link");
-
-
-mobileLinks.forEach(link => {
-
-  link.addEventListener("click", () => {
-
-    mobileMenu.classList.add("hidden");
-
-  });
 
 });
 
